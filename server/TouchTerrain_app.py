@@ -352,7 +352,7 @@ class ExportToFile(webapp2.RequestHandler):
             print >> sys.stderr, "Finished processing", full_zip_zile_name
             self.response.out.write("total zipped size: %.2f Mb<br>" % totalsize)
     
-            self.response.out.write('<br><form action="tmp/%s.zip" method="GET" enctype="multipart/form-data">' % (fname))
+            self.response.out.write('<br><form action="server/tmp/%s.zip" method="GET" enctype="multipart/form-data">' % (fname))
             self.response.out.write('<input type="submit" value="Download zip File " title="">   (will be deleted in 6 hrs)</form>')
             #self.response.out.write('<form action="/" method="GET" enctype="multipart/form-data">')
             #self.response.out.write('<input type="submit" value="Go back to selection map"> </form>')
